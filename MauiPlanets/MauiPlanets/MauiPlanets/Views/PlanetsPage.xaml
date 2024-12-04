@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:models="clr-namespace:MauiPlanets.Models"
              x:Class="Views.PlanetsPage"
              Title="PlanetsPage">
 
@@ -186,7 +187,24 @@
                         </Label.FormattedText>
                     </Label>
 
-                    <CollectionView>
+                    <CollectionView
+                        x:Name="lstPopularPlanets"
+                        HeightRequest="280"
+                        SelectionMode="Single"
+                        SelectionChanged="Planets_SelectionChanged">
+
+                        <CollectionView.ItemsLayout>
+                            <LinearItemsLayout 
+                                Orientation="Horizontal"
+                                ItemSpacing="16"/>
+                        </CollectionView.ItemsLayout>
+
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate
+                                x:DataType="models:Planet">
+                                
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
                         
                     </CollectionView>
                     

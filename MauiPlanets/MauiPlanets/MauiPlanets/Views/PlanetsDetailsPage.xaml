@@ -112,7 +112,6 @@
                                 Aspect="AspectFill"
                                 HorizontalOptions="Center"
                                 VerticalOptions="Center">
-                                
                             </Image>
                         </DataTemplate>
                     </CollectionView.ItemTemplate>

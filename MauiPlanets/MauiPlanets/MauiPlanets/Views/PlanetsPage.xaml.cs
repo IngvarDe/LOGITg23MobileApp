@@ -1,4 +1,5 @@
 using MauiPlanets.Models;
+using Services;
 
 namespace Views;
 
@@ -10,7 +11,20 @@ public partial class PlanetsPage : ContentPage
 		InitializeComponent();
 	}
 
-	async void GridArea_Tapped(System.Object sender, System.EventArgs e)
+    protected override void OnAppearing()
+    {
+		base.OnAppearing();
+
+		lstPopularPlanets.ItemsSource = PlanetsService.GetFeaturedPlanets();
+		lstAllPlanets.ItemsSource = PlanetsService.GetAllPlanets();
+    }
+
+	async void Planets_SelectionChanged(System.Object sender, Microsoft.Maui.Controls.SelectionChangedEventArgs e)
+	{
+		await Navigation.PushAsync(new PlanetsDetailsPage(e.CurrentSelection.First() as Planet));
+	}
+
+    async void GridArea_Tapped(System.Object sender, System.EventArgs e)
 	{
 		await CloseMenu();
 	}
@@ -27,10 +41,5 @@ public partial class PlanetsPage : ContentPage
 		_ = MainContentGrid.TranslateTo(-this.Width * 0.5, this.Height * 0.1, AnimationDuration, Easing.CubicIn);
 		await MainContentGrid.ScaleTo(0.8, AnimationDuration);
 		_ = MainContentGrid.ScaleTo(0.8, AnimationDuration);
-	}
-
-	async void Planets_SelectionChanged(System.Object sender, Microsoft.Maui.Controls.SelectionChangedEventArgs e)
-	{
-		await Navigation.PushAsync(new PlanetsDetailsPage(e.CurrentSelection.First() as Planet));
 	}
 }

@@ -76,7 +76,7 @@
             BackgroundColor="{StaticResource PageBackgroundColor}"
             ColumnDefinitions="*,Auto"
             RowDefinitions="Auto,*">
-            
+
             <!--Header Text-->
             <VerticalStackLayout
                 Spacing="4"
@@ -93,7 +93,7 @@
                     Text="The milky way galaxy"/>
 
             </VerticalStackLayout>
-            
+
             <!--Profile pic-->
             <Border
                 WidthRequest="56"
@@ -125,11 +125,11 @@
                             RadiusX="25"
                             RadiusY="25"/>
                     </Image.Clip>
-                    
+
                 </Image>
-                
+
             </Border>
-                
+
             <!--Main Content ScrollView-->
 
             <ScrollView
@@ -303,7 +303,9 @@
                     </CollectionView>
                 </VerticalStackLayout>
             </ScrollView>
+            
+            
+            
         </Grid>
-        
     </Grid>
 </ContentPage>

@@ -83,6 +83,81 @@ namespace Services
                     "https://www.openaccessgovernment.org/wp-content/uploads/2021/04/dreamstime_xxl_121672573-scaled.jpg"
                 }
             },
+            new()
+            {
+                Name = "Jupiter",
+                Subtitle = "The gas giant",
+                HeroImage = "jupiter.png",
+                Description = "Jupiter is the fifth planet from the Sun and the " +
+                "largest in the Solar System. It is a gas giant with a mass more " +
+                "than 2.5 times that of all the other planets in the Solar System " +
+                "combined and slightly less than one-thousandth the mass of the Sun.",
+                AccentColorStart = Color.FromArgb("#9d4a40"),
+                AccentColorEnd = Color.FromArgb("#cd8026"),
+                Images = new()
+                {
+                    "https://th-thumbnailer.cdn-si-edu.com/vKRt2OfGlFia5On4QNaraJ3vXJM=/1000x750/filters:no_upscale():focal(1829x871:1830x872)/https://tf-cmsv2-smithsonianmag-media.s3.amazonaws.com/filer_public/b5/5e/b55e16bf-9338-4433-b52f-a83fb5e2b840/pj_66_27_enhanced.png",
+                    "https://solarsystem.nasa.gov/system/feature_items/images/10_Jupiter_Io_Juno-800.jpg",
+                    "https://solarsystem.nasa.gov/system/feature_items/images/13_PIA24237_Jupiter_Cyclones-800.jpg"
+                }
+            },
+            new()
+            {
+                Name = "Saturn",
+                Subtitle = "The ring planet",
+                HeroImage = "saturn.png",
+                Description = "Saturn is the sixth planet from the Sun and the second " +
+                "largest in the Solar System, after Jupiter. It is a gas giant, with " +
+                "an average radius of about nine times that of Earth. It has an " +
+                "eighth the average density of Earth, but is over 95 times more massive.",
+                AccentColorStart = Color.FromArgb("#996237"),
+                AccentColorEnd = Color.FromArgb("#c6502f"),
+                Images = new()
+                {
+                    "https://solarsystem.nasa.gov/system/feature_items/images/151_saturn_carousel_1.jpg",
+                    "https://solarsystem.nasa.gov/system/feature_items/images/152_saturn_carousel_2.jpg",
+                    "https://solarsystem.nasa.gov/system/feature_items/images/155_saturn_carousel_5.jpg",
+                    "https://solarsystem.nasa.gov/system/feature_items/images/153_saturn_carousel_3.jpg"
+                }
+            },
+            new()
+            {
+                Name = "Uranus",
+                Subtitle = "The Herschel planet",
+                HeroImage = "uranus.png",
+                Description = "Uranus is the seventh planet from the Sun. It is a " +
+                "gaseous cyan-coloured ice giant. Most of the planet is made of " +
+                "water, ammonia, and methane in a supercritical phase of matter, " +
+                "which astronomy calls ice or volatiles. The planet's atmosphere " +
+                "has a complex layered cloud structure and has the lowest " +
+                "minimum temperature (49 K (−224 °C; −371 °F)) of all the Solar " +
+                "System's planets.",
+                AccentColorStart = Color.FromArgb("#9d4a40"),
+                AccentColorEnd = Color.FromArgb("#996237"),
+                Images = new()
+                {
+                    "https://ichef.bbci.co.uk/images/ic/1376xn/p0257vk5.jpg.webp",
+                    "https://solarsystem.nasa.gov/system/feature_items/images/88_carousel_uranus.jpg",
+                    "https://solarsystem.nasa.gov/system/feature_items/images/89_uranus_carousel_1.jpg",
+                    "https://solarsystem.nasa.gov/system/feature_items/images/88_carousel_uranus.jpg"
+                }
+            },
+            new()
+            {
+                Name = "Neptune",
+                Subtitle = "The good of sea",
+                HeroImage = "neptune.png",
+                Description = "Neptune is the eighth and farthest known planet " +
+                "from the Sun. It is the fourth-largest planet in the Solar " +
+                "System by diameter, the third-most-massive planet, and the " +
+                "densest giant planet. It is 17 times the mass of Earth. ",
+                AccentColorStart = Color.FromArgb("#0c293d"),
+                AccentColorEnd = Color.FromArgb("#26abe0"),
+                Images = new()
+                {
+                    "https://images-assets.nasa.gov/image/PIA01492/PIA01492~large.jpg?w=1920&h=1917&fit=clip&crop=faces%2Cfocalpoint",
+                }
+            },
         };
 
         public static List<Planet> GetFeaturedPlanets()

@@ -108,5 +108,22 @@ namespace ViewModels
                 SetOperatingProductCommand.Execute(new());
             }, busyText);
         }
+
+        [RelayCommand]
+        private async Task DeleteProductAsync(int id)
+        {
+            await ExecuteAsync(async () =>
+            {
+                if (await _context.DeleteItemByKeyAsync<Product>(id))
+                {
+                    var product = Products.FirstOrDefault(p => p.Id == id);
+                    Products.Remove(product);
+                }
+                else
+                {
+                    await Shell.Current.DisplayAlert("Delete Error", "Product was not deleted", "OK");
+                }
+            }, "Deleting product...");
+        }
     }
 }

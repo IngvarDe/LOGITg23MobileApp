@@ -1,10 +1,10 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using Data;
-using Models;
+using MauiCRUD.Models;
 using System.Collections.ObjectModel;
 
-namespace ViewModels
+namespace MauiCRUD.ViewModels
 {
     public partial class ProductsViewModel : ObservableObject
     {

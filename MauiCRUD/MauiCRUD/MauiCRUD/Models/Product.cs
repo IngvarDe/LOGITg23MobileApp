@@ -1,7 +1,7 @@
 ﻿using SQLite;
 
 
-namespace Models
+namespace MauiCRUD.Models
 {
     public class Product
     {

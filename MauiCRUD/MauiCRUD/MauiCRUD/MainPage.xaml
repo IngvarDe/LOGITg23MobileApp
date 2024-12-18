@@ -82,7 +82,7 @@
                     <ContentView>
                         <VerticalStackLayout HorizontalOptions="Center"
                                              VerticalOptions="Center">
-                            <Label Text="No Product Found"
+                            <Label Text="No Products Found"
                                    FontSize="18"
                                    FontAttributes="Bold"
                                    HorizontalTextAlignment="Center"/>
@@ -116,7 +116,7 @@
                         <Entry Text="{Binding OperatingProduct.Price}"
                                Placeholder="Product price"
                                Margin="0"
-                               BackgroundColor="#DAD1F9"
+                               BackgroundColor="#DAD1F9" 
                                Keyboard="Numeric" />
                     </VerticalStackLayout>
 
@@ -139,7 +139,6 @@
                 </Grid>
             </VerticalStackLayout>
         </Grid>
-
     </Grid>
-    
+
 </ContentPage>

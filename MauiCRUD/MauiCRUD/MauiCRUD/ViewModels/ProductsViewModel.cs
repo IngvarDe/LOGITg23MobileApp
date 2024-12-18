@@ -32,7 +32,7 @@ namespace MauiCRUD.ViewModels
             await ExecuteAsync(async () =>
             {
                 var products = await _context.GetAllAsync<Product>();
-                if (products != null && products.Any())
+                if (products is not null && products.Any())
                 {
                     Products ??= new ObservableCollection<Product>();
 
@@ -70,7 +70,7 @@ namespace MauiCRUD.ViewModels
         [RelayCommand]
         private async Task SaveProductAsync()
         {
-            if (OperatingProduct != null)
+            if (OperatingProduct is null)
                 return;
 
             var (isValid, errorMessage) = OperatingProduct.Validate();
